@@ -1,0 +1,113 @@
+/* Reset default padding and margin */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { 
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Main dashboard styling */
+.dashboard { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Title styling */
+.title {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+/* Welcome message styling */
+.welcome-message { 
+  z-index: 2;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.welcome-message h4 { 
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.welcome-message p { 
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+/* Sale message styling */
+.Sales {
+  font-family: Berlin Sans FB Demi;
+  color: white;
+  background: none;
+  padding: 0;
+}
+
+.Sales + p {
+  color: white;
+}
+
+/* Carousel container */
+.carousel { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow if the image exceeds the container */
+}
+
+/* Image styling */
+.carousel-image {
+  height: 500px; /* Set the height of the image explicitly */
+  width: 900px; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensures the image is cropped properly if necessary */
+}
+
+/* Responsive text sizing for mobile */
+@media (max-width: 768px) {
+  .welcome-message h4 { 
+    font-size: 1.5rem;
+  }
+  .welcome-message p { 
+    font-size: 1rem;
+  }
+  .image-container {
+    height: 50vh; /* Smaller height for mobile screens */
+    width: 90vw; /* Slightly wider for mobile screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome-message p {
+    font-size: 1.5rem;
+  }
+}
